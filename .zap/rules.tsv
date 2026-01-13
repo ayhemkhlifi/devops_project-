@@ -1,0 +1,18 @@
+# ZAP Scanning Rule Configuration
+# Format: rule_id  IGNORE|WARN|FAIL  description
+
+# Ignore rules
+10021  IGNORE  X-Content-Type-Options header not set (dev environment)
+10020  IGNORE  X-Frame-Options header not set (dev environment)
+
+# Warn on medium severity
+10035  WARN    Strict-Transport-Security header not set
+10096  WARN    Timestamp Disclosure
+10109  WARN    Modern Web Application
+
+# Fail on high severity
+90001  FAIL    Insecure HTTP Method
+40012  FAIL    Cross Site Scripting (XSS)
+40014  FAIL    Cross Site Scripting (Persistent)
+40016  FAIL    Cross Site Scripting (Reflected)
+40018  FAIL    SQL Injection
