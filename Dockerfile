@@ -1,5 +1,5 @@
 # Build stage - Install dependencies
-FROM python:3.11-slim as builder
+FROM python:3.12-slim as builder
 
 WORKDIR /build
 
@@ -15,7 +15,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Runtime stage - Minimal production image
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 # Add metadata labels
 LABEL maintainer="devops-student"

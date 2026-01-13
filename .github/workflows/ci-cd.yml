@@ -8,7 +8,7 @@ on:
 
 env:
   DOCKER_IMAGE: devops-api
-  PYTHON_VERSION: '3.13'
+  PYTHON_VERSION: '3.12'
 
 jobs:
   # Job 1: Code Quality & Testing
