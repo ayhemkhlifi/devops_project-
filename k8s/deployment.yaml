@@ -19,8 +19,8 @@ spec:
     spec:
       containers:
       - name: api
-        image: YOUR_DOCKERHUB_USERNAME/devops-api:1.0.0
-        imagePullPolicy: Always
+        image: devops-api:1.0.0
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
           name: http
