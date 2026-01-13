@@ -162,15 +162,7 @@ jobs:
         rules_file_name: '.zap/rules.tsv'
         cmd_options: '-a'
         allow_issue_writing: false
-    
-    - name: Upload ZAP report
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: zap-scan-report
-        path: |
-          report_html.html
-          report_json.json
+        artifact_name: ''
     
     - name: Cleanup
       if: always()
